@@ -20,7 +20,7 @@ Function Walkthrough:
   sampling rate per second, calculates the data loss percentage, and displays the results for each
   second based on the file given. The new CSV file written is named under (new_name)
   
-  ### III. Finding out abnormal sampling rates
+  ### III. Filtering out abnormal sampling rates
   - def weird_data(new_name):
     - takes in newly created csv file containing sampling rates and start/stop time, iterates through 
   the data to find any sampling rates less than 30 or greater than 70, and creates new columns that
