@@ -1,4 +1,4 @@
-## HTS_draft
+## CSV File Formatting for Accelerometer
 Python Code (contains plotly, pandas)
 
 Utilizes accelerometer datafiles (CSV format) that contain "HEADER_TIME_STAMPS" as well as 3D coordinates (X,Y,Z); creates newly formatted CSV files
