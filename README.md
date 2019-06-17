@@ -1,5 +1,5 @@
 ## HTS_draft
-Python Code (contains plotly,pandas)
+Python Code (contains plotly, pandas)
 
 Utilizes accelerometer datafiles (CSV format) that contain "HEADER_TIME_STAMPS" as well as 3D coordinates (X,Y,Z) and creates new formatted CSV files
 
@@ -29,8 +29,10 @@ Function Walkthrough:
     
   ### IV. Graphing sampling rate vs time on plotly
   - def plot_time_vs_sample(file, graph_name):
-    - takes in newly created csv file containing sampling rates and start/stop time, and plots Sampling Rate  
+    - takes in newly created csv file containing sampling rates and start/stop time (file), and plots Sampling Rate  
     along the Y-axis and the start time of the recorded timestamps along the X-axis, graph created will be on Plotly
+    and will be named accordingly (graph_name)
+    
     
  
   
