@@ -1,7 +1,8 @@
 ## HTS_draft
-Python Pandas Code
-contains plotly,pandas 
+Python Code (contains plotly,pandas)
+
 Utilizes accelerometer datafiles (CSV format) that contain "HEADER_TIME_STAMPS" as well as 3D coordinates (X,Y,Z) and creates new formatted CSV files
+
 Function Walkthrough:
   
   ### I. Convert file to use on GitHub Visualizer
