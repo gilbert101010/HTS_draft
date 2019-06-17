@@ -36,7 +36,7 @@ Function Walkthrough:
   ### V. Main Class
   - def main():
     - utilizes read_file, complete_format, and plot_time_vs_sample; directory/PATH changed to the folder containing
-    the datasets but must include 'r' before directory ////(r'--directory here--')
+    the datasets but must include 'r' before directory //// (r'--directory here--')
     - creates new sensor.csv files that contains start/stop/sampling_rate/data_loss_percentage, and for each csv file
     creates a new plotly graph that compares sampling rate vs time
     
