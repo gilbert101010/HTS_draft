@@ -33,7 +33,12 @@ Function Walkthrough:
     along the Y-axis and the start time of the recorded timestamps along the X-axis, graph created will be on Plotly
     and will be named accordingly (graph_name)
     - Accessing plotly graph link: (https://plot.ly/~liang.gi)
-    
+  ### V. Main Class
+  - def main():
+    - utilizes read_file, complete_format, and plot_time_vs_sample; directory/PATH changed to the folder containing
+    the datasets but must include 'r' before directory ////(r'--directory here--')
+    - creates new sensor.csv files that contains start/stop/sampling_rate/data_loss_percentage, and for each csv file
+    creates a new plotly graph that compares sampling rate vs time
     
     
  
