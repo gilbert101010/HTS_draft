@@ -32,6 +32,8 @@ Function Walkthrough:
     - takes in newly created csv file containing sampling rates and start/stop time (file), and plots Sampling Rate  
     along the Y-axis and the start time of the recorded timestamps along the X-axis, graph created will be on Plotly
     and will be named accordingly (graph_name)
+    - Accessing plotly graph link: (https://plot.ly/~liang.gi)
+    
     
     
  
