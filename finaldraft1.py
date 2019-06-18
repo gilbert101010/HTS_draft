@@ -178,7 +178,8 @@ def plot_time_vs_sample(file, graph_name):
     
 def main():
     new_name = ''
-    #iterate through a folder that contains sensor.csv files with header timestamp s
+    visual = ''
+    #iterate through a folder that contains sensor.csv files with header timestamps
     for filename in os.listdir(r'C:\Users\gilbe\Documents\data_science'):
         if(filename.endswith("sensor.csv")):
             #specifically used to differentiate files based on start time 
@@ -188,8 +189,12 @@ def main():
                 pass
             #read given csv file and produce a template file with specific formatting
             read_file(filename)
+            #how you want to name your newly created files
             graph = new_name + '.graph'
+            visual = new_name + '.xyz.sensor.csv'
             new_name = new_name + 'samplerate.sensor.csv'
+            
+            hs_x_y_z(filename,visual)
             #write new csv file containing HTS,SR
             complete_format(new_name)
             #create a plotly graph that graphs Sampling Rate vs Time
