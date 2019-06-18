@@ -7,7 +7,6 @@ import plotly.plotly as py
 import plotly.graph_objs as go 
 import plotly.figure_factory as FF
 from datetime import datetime, timedelta, date
-#plotly.tools.set_credentials_file(username='liang.gi', api_key = 'EpcUi1Mh6DoDNtEFmsh7')
 
 def hs_x_y_z(file_name,new_name):
     #convert csv file to new csv file with only #HeaderTS,X,Y,Z to use on visualizer 
