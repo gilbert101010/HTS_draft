@@ -176,28 +176,31 @@ def plot_time_vs_sample(file, graph_name):
     py.plot(fig, filename = graph_name)
     
 def main():
+    def main():
     new_name = ''
     visual = ''
+    new_folder('Formatted Data')
+
     #iterate through a folder that contains sensor.csv files with header timestamps
     for filename in os.listdir(r'C:\Users\gilbe\Documents\data_science'):
-        if(filename.endswith("sensor.csv")):
-            #specifically used to differentiate files based on start time 
-            new_name = filename[-20:-17]
-            #if the sensor file is already created then skip the file
-            if(new_name == new_name + 'samplerate.sensor.csv'):
-                pass
-            #read given csv file and produce a template file with specific formatting
-            read_file(filename)
-            #how you want to name your newly created files
-            graph = new_name + '.graph'
-            visual = new_name + '.xyz.sensor.csv'
-            new_name = new_name + 'samplerate.sensor.csv'
-            
-            hs_x_y_z(filename,visual)
-            #write new csv file containing HTS,SR
-            complete_format(new_name)
-            #create a plotly graph that graphs Sampling Rate vs Time
-            plot_time_vs_sample(new_name,graph) 
+        if(filename.endswith("sensor.csv")): 
+            #prevent creating files that already exist
+            if((os.path.isfile(filename[0:3] + 'xyz.sensor.csv')) or (os.path.isfile(filename[0:3] + 'samplerate.sensor.csv'))):
+                continue
+            elif((os.path.isfile(filename[-20:-17] + 'xyz.sensor.csv')) or (os.path.isfile(filename[-20:-17] + 'samplerate.sensor.csv'))):
+                continue
+            else:
+                #read given csv file and produce a template file with specific formatting
+                print('creating new file for ' + filename)
+                read_file(filename)
+                #how you want to name your newly created files
+                graph = filename[-20:-17] + '.graph'
+                visual = filename[-20:-17] + '.xyz.sensor.csv'
+                new_name = filename[-20:-17] + 'samplerate.sensor.csv'
+                hs_x_y_z(filename,visual)
+                complete_format(new_name)
+                #create a plotly graph that graphs Sampling Rate vs Time
+                plot_time_vs_sample(new_name,graph)   
         else:
             continue
 #main()
