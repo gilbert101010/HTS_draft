@@ -198,19 +198,22 @@ def main():
                 graph = filename[-20:-17] + '.graph'
                 visual = filename[-20:-17] + '.xyz.sensor.csv'
                 new_name = filename[-20:-17] + 'samplerate.sensor.csv'
+                config = Path(path_new + '\\' + visual)
+                print(config)
+                if config.is_file():
+                    print(visual + "File already exists")
+                    continue
                 hs_x_y_z(filename,visual)
                 complete_format(new_name)
                 #create a plotly graph that graphs Sampling Rate vs Time
                 #plot_time_vs_sample(new_name,graph)   
         else:
             continue
+        #move files to new folder directory
+        shutil.move(visual,path_new)
+        shutil.move(new_name,path_new)
     
     
     #move newly created files to folder 
-    #print(os.listdir(r'C:\Users\Public\Desktop'))
-    for filename in os.listdir(path_old):
-
-        if(filename.endswith('xyz.sensor.csv') or filename.endswith('samplerate.sensor.csv')):
-            shutil.move(filename,path_new)
-            #move files to new folder'''
+ 
 main()
