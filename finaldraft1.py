@@ -176,15 +176,16 @@ def plot_time_vs_sample(file, graph_name):
     py.plot(fig, filename = graph_name)
     
 def main():
-    def main():
     new_name = ''
     visual = ''
+    folder_name = 'Formatted Data' #change name of folder if
+    path_old = r --user directory-- #requires directory that python file is in 
+    
     new_folder('Formatted Data')
-
+    path_new = path_old + '\\' + folder_name
     #iterate through a folder that contains sensor.csv files with header timestamps
-    for filename in os.listdir(r--enter directory--):
+    for filename in os.listdir(path_old):
         if(filename.endswith("sensor.csv")): 
-            #prevent creating files that already exist
             if((os.path.isfile(filename[0:3] + 'xyz.sensor.csv')) or (os.path.isfile(filename[0:3] + 'samplerate.sensor.csv'))):
                 continue
             elif((os.path.isfile(filename[-20:-17] + 'xyz.sensor.csv')) or (os.path.isfile(filename[-20:-17] + 'samplerate.sensor.csv'))):
@@ -200,7 +201,16 @@ def main():
                 hs_x_y_z(filename,visual)
                 complete_format(new_name)
                 #create a plotly graph that graphs Sampling Rate vs Time
-                plot_time_vs_sample(new_name,graph)   
+                #plot_time_vs_sample(new_name,graph)   
         else:
             continue
-#main()
+    
+    
+    #move newly created files to folder 
+    #print(os.listdir(r'C:\Users\Public\Desktop'))
+    for filename in os.listdir(path_old):
+
+        if(filename.endswith('xyz.sensor.csv') or filename.endswith('samplerate.sensor.csv')):
+            shutil.move(filename,path_new)
+            #move files to new folder'''
+main()
