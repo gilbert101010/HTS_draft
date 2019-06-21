@@ -182,7 +182,7 @@ def main():
     new_folder('Formatted Data')
 
     #iterate through a folder that contains sensor.csv files with header timestamps
-    for filename in os.listdir(r'C:\Users\gilbe\Documents\data_science'):
+    for filename in os.listdir(r--enter directory--):
         if(filename.endswith("sensor.csv")): 
             #prevent creating files that already exist
             if((os.path.isfile(filename[0:3] + 'xyz.sensor.csv')) or (os.path.isfile(filename[0:3] + 'samplerate.sensor.csv'))):
