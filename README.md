@@ -39,6 +39,7 @@ Function Walkthrough:
     the datasets but must include 'r' before directory //// (r'--directory here--')
     - creates new sensor.csv files that contains start/stop/sampling_rate/data_loss_percentage, and for each csv file
     creates a new plotly graph that compares sampling rate vs time
+    - creates a new folder that contains the new files created but requires path/directory to be changed by the user
     
     
  
